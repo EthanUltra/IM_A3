@@ -63,7 +63,7 @@ function setup() {
   document.getElementById('skip').addEventListener('click', nextTrack);
   document.getElementById('playback').addEventListener('click', previousTrack);
   document.getElementById('color').addEventListener('click', () => {
-    pointyOn = (pointyOn + 1) % 9;
+    pointyOn = (pointyOn + 6) % 9;
     landscapePointy();
   });
 
