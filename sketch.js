@@ -43,22 +43,6 @@ const visualizerColors = [
   { r: 255, g: 255, b: 0 }
 ];
 
-// Preload function to ensure audio files are loaded before playing
-function preload() {
-  const tracks = [
-    '80s-retro-synth-wave-223103.mp3',
-    '80s-retrowave-synthwave-retro-synthpop-futuristic-electro-pop-music-20596.mp3',
-    '80x-chill-synthwave-201658.mp3',
-    '80x-deep-synthwave-203118.mp3',
-    'midnight-synths-237179.mp3',
-    'traveling-memories-technology-future-synthwave-199941.mp3'
-  ];
-
-  tracks.forEach((track, index) => {
-    music[index] = loadSound(track);
-  });
-}
-
 // Setup function
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -70,6 +54,8 @@ function setup() {
 
   // Initialize FFT object for audio analysis
   fft = new p5.FFT();
+
+  let pointyOn = 0; // Global variable initialization
 
   // Add slider for controlling visualizer intensity
   intensitySlider = createSlider(0.1, 1, 0.5, 0.1);
@@ -91,7 +77,7 @@ function setup() {
   document.getElementById('sky').addEventListener('click', changeGridColor);
 
   // Add event listener to change the sun video on clicking #sun button
-document.getElementById('sun').addEventListener('click', switchSunVideo);
+  document.getElementById('sun').addEventListener('click', switchSunVideo);
 }
 
 // Draw function
