@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/erl5zsh.css">
+    <style>
+      #musicButton {
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="taskbar1">
+      <img src="cassette1.svg" id="cassette">
+      <div id="musicdes">
+        <h1>Now playing:</h1>
+        <h2>UPBEAT.mp3</h2>
+        <h3>For You</h3>
+      </div>
+      <div id="buttonsset">
+        <img src="playback1.svg" id="playback" class="buttons">
+        <img src="play1.svg" id="play" class="buttons">
+        <img src="skip1.svg" id="skip" class="buttons">
+      </div>
+    </div>
+    <div id="taskbar2">
+      <img src="sun1.svg" id="sun" class="buttons">
+      <img src="sky1.svg" id="sky" class="buttons">
+      <img src="landscape1.svg" id="color" class="buttons">
+    </div>
+
+    <button id="musicButton">Play Music</button>
+    
+    <div id="taskbar3">
+      <p>press W or S to adjust the speed</p>
+      <p>press A or D to adjust the visualizer intensity</p>
+      <p>press M to mute/unmute</p>
+    </div>
+    <div id="taskbar4">
+      <h2 class="h2">Speed:</h2>
+      <h3 id="speeddisplay">0</h3>
+      <h2 class="h2">Intensity:</h2>
+      <h3 id="intensitydisplay">0</h3>
+    </div>
+    
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
