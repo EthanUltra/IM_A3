@@ -55,8 +55,6 @@ function setup() {
   // Initialize FFT object for audio analysis
   fft = new p5.FFT();
 
-  let pointyOn = 0; // Global variable initialization
-
   // Add slider for controlling visualizer intensity
   intensitySlider = createSlider(0.1, 1, 0.5, 0.1);
 
@@ -77,7 +75,7 @@ function setup() {
   document.getElementById('sky').addEventListener('click', changeGridColor);
 
   // Add event listener to change the sun video on clicking #sun button
-  document.getElementById('sun').addEventListener('click', switchSunVideo);
+document.getElementById('sun').addEventListener('click', switchSunVideo);
 }
 
 // Draw function
